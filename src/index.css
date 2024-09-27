@@ -8,6 +8,16 @@ body {
   background-color: black;
   color: rgb(255, 255, 255);
 }
+.mob {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+.tap {
+  width: 50%;
+  height:200px ;
+
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
