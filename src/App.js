@@ -23,19 +23,17 @@ import './App.css';
 //   );
 // }
 const styles ={
-  color: 'blue',
-  fontSize: '30px'
-
+  width: "50%",
+  height: "60px",
+  display: "block",
+  backgroundColor: "#ccfff0"
 }
 export default function App() {
-  const [number, setNumber] = useState(0);
-  useEffect(()=> {
-    setNumber(Math.random()*1000)
-  },[])
+  const [value, setValue] = useState();
   return (
     <div className="App">
-      <h1 className='red big'>Привет число!</h1>
-      <div style={styles}>Я число-{number}</div>
+      <input style={styles} value={value} onChange={event => setValue(event.target.value)} type="text"></input>
+      <button style={styles} onClick={ event => setValue("") } type="button">Очистить</button>
     </div>
   );
 };
