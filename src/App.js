@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import UserList from './UserList';
 import MyComponent from './MyComponent';
+import State from './State';
 
 const styles ={
   width: "50%",
@@ -17,6 +18,7 @@ export default function App() {
       <button style={styles} onClick={ event => setValue("") } type="button">Очистить</button>
       <UserList/>
       <MyComponent prop1={styles.width} prop2={'props-2'}/>
+      <State/>
     </div>
   );
 };
