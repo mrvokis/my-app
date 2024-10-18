@@ -1,10 +1,16 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 const initialState = ()=>{
     return 0;
 };
 const State = (props)=> {
     const [click, setClick]= useState(initialState());
-    const [isClicked, setIsClicked]=useState(false)
+    const [isClicked, setIsClicked]=useState(false);
+    const [x,setX] = useState(1);
+    useEffect(()=> {
+        document.body.addEventListener('mousemove',(event)=> {
+            setX(window.event.clientX);
+        })
+    },[])
     const handlerSetClick = ()=>{
         setClick(click+1);
         setIsClicked(isClicked);
@@ -17,6 +23,9 @@ const State = (props)=> {
             {isClicked&&
             <p>Кнопка была нажата</p>
             }  
+            <div>
+                Координата мыши X - {x}
+            </div>
         </div>
     )
 }
