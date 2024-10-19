@@ -3,6 +3,7 @@ import './App.css';
 import UserList from './UserList';
 import MyComponent from './MyComponent';
 import State from './State';
+import AnotherComponent from './AnotherComponent';
 
 const styles ={
   width: "50%",
@@ -19,6 +20,7 @@ export default function App() {
       <UserList/>
       <MyComponent prop1={styles.width} prop2={'props-2'}/>
       <State/>
+      <AnotherComponent/>
     </div>
   );
 };
