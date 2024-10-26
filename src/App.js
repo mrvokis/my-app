@@ -4,6 +4,7 @@ import UserList from './UserList';
 import MyComponent from './MyComponent';
 import State from './State';
 import AnotherComponent from './AnotherComponent';
+import Lesson16 from './Lesson16';
 
 const styles ={
   width: "50%",
@@ -21,6 +22,7 @@ export default function App() {
       <MyComponent prop1={styles.width} prop2={'props-2'}/>
       <State/>
       <AnotherComponent/>
+      <Lesson16 items={['item-0, item-1, item-2']}/>
     </div>
   );
 };
